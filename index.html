@@ -25,9 +25,14 @@
     
 
     <script>
+        'use strict';
+        
+        //greeting
         var userName = prompt("Howdy there friend! My name is Nic.  What\'s your name?");
         console.log("What\'s your name" + userName);
         alert("Nice to meet you " + userName + "!" + " Since we\'re now friends, let\'s play a quick game so you can get to know me!");
+       
+       //question about pets
         var pets = prompt("Does Nic have any pets?").toLowerCase();
         
         if(pets === "yes" || pets === "y"){
@@ -38,6 +43,7 @@
             alert("Just a simple yes or no answer works please.");
         };
 
+        //question about home state
         var home = prompt("Is Nic from Washington?").toLowerCase();
 
         if(home === "yes" || home === "y"){
@@ -47,7 +53,8 @@
         } else {
             alert("Just a simple yes or no answer works please.");
         };
-
+        
+        //question about sports
         var sports = prompt("Is Nic a fan of sports?").toLowerCase();
 
         if(sports === "yes" || sports === "y"){
@@ -57,7 +64,8 @@
         } else {
             alert("Just a simple yes or no answer works please.");
         };
-
+        
+        //question about coffee
         var coffee = prompt("Does Nic love coffee?").toLowerCase();
 
         if(coffee === "yes" || coffee === "y"){
@@ -67,7 +75,8 @@
         } else {
             alert("Just a simple yes or no answer works please.");
         };
-
+        
+        //someone famous question
         var famous = prompt("Has Nic met anyone famous?").toLowerCase();
 
         if(famous === "yes" || famous === "y"){
@@ -77,7 +86,7 @@
         } else {
             alert("Just a simple yes or no answer works please.");
         };
-
+        
         alert("Well thanks a bunch for playing this quick guessing game! I guess that makes us best friends now, huh?");
         
     </script>

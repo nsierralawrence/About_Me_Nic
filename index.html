@@ -5,23 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Get To Know Nic</title>
+    <link href="style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 
-    <p>Does Nic have any pets?</p>
-        <p>Answer: Yes!</p>
-    <p>Is Nic from Washington?</p>
-        <p>Answer: Nope</p>
-    <p>Is Nic a football fan?</p>
-        <p>Answer: No</p>
-    <p>Does Nic prefer tea or coffee?</p>
-        <p>Coffee! Forever and ever!</p>
-    <p>Has Nic met anyone famous?</p>
-        <p>Yup!</p>
+    <h1>All About Nic</h1>
+    <ul>
+        <li>Does Nic have any pets?</li>
+            <p>Answer: Yes!</p>
+        <li>Is Nic from Washington?</li>
+            <p>Answer: Nope</p>
+        <li>Is Nic a sports fan?</li>
+            <p>Answer: No</p>
+        <li>Does Nic love coffee?</li>
+            <p>You bet! Forever and ever!</p>
+        <li>Has Nic met anyone famous?</li>
+            <p>Yup!</p>
+    </ul>
+    
 
     <script>
-        alert("Howdy there friend! My name is Nic.  Since we\'re now friends, let\'s play a quick game so you can get to know me!");
-        prompt("Does Nic have any pets?");
+        var userName = prompt("Howdy there friend! My name is Nic.  What\'s your name?");
+        console.log("What\'s your name" + userName);
+        alert("Nice to meet you " + userName + "!" + " Since we\'re now friends, let\'s play a quick game so you can get to know me!");
+        var pets = prompt("Does Nic have any pets?").toLowerCase();
+        
+        if(pets === "yes" || pets === "y"){
+            alert("Correct! Nic has one big fat kitty cat.");
+        } else if(pets === "no" || pets === "n"){
+            alert("Actually I do! One fat cat.");
+        } else {
+            alert("Just a simple yes or no answer works please.");
+        };
+
+        var home = prompt("Is Nic from Washington?").toLowerCase();
+
+        if(home === "yes" || home === "y"){
+            alert("Nope! Nic is from the great state of Colorado.");
+        } else if(home === "no" || home === "n"){
+            alert("You guessed right! Nic is actually from Colorful Colorado.");
+        } else {
+            alert("Just a simple yes or no answer works please.");
+        };
+
+        var sports = prompt("Is Nic a fan of sports?").toLowerCase();
+
+        if(sports === "yes" || sports === "y"){
+            alert("Nah, I'd rather read a book.");
+        } else if(sports === "no" || sports ==="n"){
+            alert("That's the right answer. Nic is not a sports fan.");
+        } else {
+            alert("Just a simple yes or no answer works please.");
+        };
+
+        var coffee = prompt("Does Nic love coffee?").toLowerCase();
+
+        if(coffee === "yes" || coffee === "y"){
+            alert("Yup! Forever and always!");
+        } else if(coffee === "no" || coffee ==="n"){
+            alert("No way! Nic would die without coffee!");
+        } else {
+            alert("Just a simple yes or no answer works please.");
+        };
+
+        var famous = prompt("Has Nic met anyone famous?").toLowerCase();
+
+        if(famous === "yes" || famous === "y"){
+            alert("You bet! I once served a slice of chocolate cake to Ben Gibbard of Death Cab for Cutie.");
+        } else if(famous === "no" || famous ==="n"){
+            alert("Ah, but I have! Guess who!?");
+        } else {
+            alert("Just a simple yes or no answer works please.");
+        };
+
+        alert("Well thanks a bunch for playing this quick guessing game! I guess that makes us best friends now, huh?");
         
     </script>
     

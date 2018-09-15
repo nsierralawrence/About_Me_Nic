@@ -1,14 +1,19 @@
 'use strict';
             var correctAnswers = 0
         //greeting
+       function userNameQuestion(){
+
         var userName = prompt("Howdy there friend! My name is Nic.  What\'s your name?");
         console.log(userName);
         while(!userName){
             userName = prompt("I already told you my name, so it\'s only fair that you tell me your name too.")
         }
         alert("Nice to meet you " + userName + "!" + " Since we\'re now friends, let\'s play a quick game so you can get to know me!");
-       
+        }
+        userNameQuestion();
+
        //question about pets
+        function petsQuestion(){
         var pets = prompt("Does Nic have any pets?").toLowerCase();
         
         while(!pets){
@@ -17,6 +22,7 @@
 
         if(pets === "yes" || pets === "y"){
             alert("Correct! Nic has one big fat kitty cat.");
+            correctAnswers++;
         } else if(pets === "no" || pets === "n"){
             alert("Actually I do! One fat cat.");
         } else {
@@ -24,8 +30,11 @@
         }
 
         console.log(pets);
+        }
+        petsQuestion();
 
         //question about home state
+        function homeQuestion(){
         var home = prompt("Is Nic from Washington?").toLowerCase();
 
         while(!home){
@@ -36,12 +45,16 @@
             alert("Nope! Nic is from the great state of Colorado.");
         } else if(home === "no" || home === "n"){
             alert("You guessed right! Nic is actually from Colorful Colorado.");
+            correctAnswers++;
         } else {
             alert("Just a simple yes or no answer works please.");
         }
         console.log(home);
-    
+        }
+        homeQuestion();
+
         //question about sports
+        function sportsQuestion(){
         var sports = prompt("Is Nic a fan of sports?").toLowerCase();
 
         while(!sports){
@@ -52,13 +65,17 @@
             alert("Nah, I'd rather read a book.");
         } else if(sports === "no" || sports ==="n"){
             alert("That's the right answer. Nic is not a sports fan.");
+            correctAnswers++;
         } else {
             alert("Just a simple yes or no answer works please.");
         }
         
         console.log(sports);
+        }
+        sportsQuestion();
 
         //question about coffee
+        function coffeeQuestion(){
         var coffee = prompt("Does Nic love coffee?").toLowerCase();
 
         while(!coffee){
@@ -67,6 +84,7 @@
 
         if(coffee === "yes" || coffee === "y"){
             alert("Yup! Forever and always!");
+            correctAnswers++;
         } else if(coffee === "no" || coffee ==="n"){
             alert("No way! Nic would die without coffee!");
         } else {
@@ -74,8 +92,11 @@
         }
 
         console.log(coffee);
-        
+        }
+        coffeeQuestion();
+
         //someone famous question
+        function famousQuestion(){
         var famous = prompt("Has Nic met anyone famous?").toLowerCase();
 
         while(!famous){
@@ -84,6 +105,7 @@
 
         if(famous === "yes" || famous === "y"){
             alert("You bet! I once served a slice of chocolate cake to Ben Gibbard of Death Cab for Cutie.");
+            correctAnswers++;
         } else if(famous === "no" || famous ==="n"){
             alert("Ah, but I have! Guess who!?");
         } else {
@@ -91,8 +113,11 @@
         }
 
         console.log(famous);
+        }
+        famousQuestion();
 
         //run function till they have guessed four times
+        function numCoffeeQuestion(){
         var coffeeCounter = 4;
         var numCoffee = 13;
         var coffeeGuess;
@@ -100,7 +125,8 @@
         do{
             coffeeGuess = parseInt(prompt("Can you correctly guess how many coffees I\'ve had so far this week?"));
             if(numCoffee === coffeeGuess){
-                alert("You guessed right! I clearly love coffee.")
+                alert("You guessed right! I clearly love coffee.");
+                correctAnswers++;
                 break;
             } else if(coffeeGuess < numCoffee){
                 alert("Too low. Try again.");
@@ -115,8 +141,11 @@
         }
 
         console.log(numCoffee === coffeeGuess);
+        }
+        numCoffeeQuestion();
 
         //question about states I've traveled to
+        function statesQuestion(){
         var stateCounter = 6;
         var states = ['Washington', 'Oregon', 'California', 'Arizona', 'Nevada', 'Idaho', 'Utah', 'Wyoming', 'New Mexico', 'Colorado', 'Kansas', 'Missouri', 'Oklahoma', 'Iowa', 'New York', 'Texas'];
         var answeredRight = false;
@@ -133,6 +162,7 @@
             if(answeredRight){
                 // alert(states[i]);
                 alert("Yuppers! Been there. Done that.");
+                correctAnswers++;
             } else{
                 alert("I\'ve been many places, but I haven\'t been there yet. Try again.");
             }
@@ -142,4 +172,8 @@
             if(!answeredRight || answeredRight){
                 alert("Nice tries. I\'ve travelled to and through: Washington, Oregon, California, Arizona, Nevada, New Mexico, Idaho, Utah, Wyoming, Colorado, Kansas, Missouri, Oklahoma, Iowa, New York and Texas.");
             }
-                
+            }
+            statesQuestion();
+            
+var totalQuestions = 7;
+alert('You got ' + correctAnswers + ' out of ' + totalQuestions + 'correct ' + userName + '.' + 'better luck next time!');

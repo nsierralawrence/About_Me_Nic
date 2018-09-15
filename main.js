@@ -1,5 +1,5 @@
 'use strict';
-        
+            var correctAnswers = 0
         //greeting
         var userName = prompt("Howdy there friend! My name is Nic.  What\'s your name?");
         console.log(userName);
@@ -110,7 +110,7 @@
             coffeeCounter--;
         } while(numCoffee !== coffeeGuess && coffeeCounter > 0);
 
-        if(counter === 0){
+        if(coffeeCounter === 0){
             alert("Nice tries.  I\'ve had 13 coffees this week...so far.");
         }
 
@@ -119,12 +119,27 @@
         //question about states I've traveled to
         var stateCounter = 6;
         var states = ['Washington', 'Oregon', 'California', 'Arizona', 'Nevada', 'Idaho', 'Utah', 'Wyoming', 'New Mexico', 'Colorado', 'Kansas', 'Missouri', 'Oklahoma', 'Iowa', 'New York', 'Texas'];
+        var answeredRight = false;
 
         do{
-            varAnswer = prompt("Can you guess which states I\'ve travelled to?");
-            var answeredRight
-        }
-        
+            var stateAnswer = prompt("Can you guess which states I\'ve travelled to?");
+            
+            for(var i = 0; i < states.length; i++){
+                if(states[i] === stateAnswer){
+                    answeredRight = true;
+                }
+            }
 
+            if(answeredRight){
+                // alert(states[i]);
+                alert("Yuppers! Been there. Done that.");
+            } else{
+                alert("I\'ve been many places, but I haven\'t been there yet. Try again.");
+            }
+            stateCounter--;
+            } while(stateCounter >  0  && !answeredRight);
 
-        //alert("Well thanks a bunch for playing this quick guessing game! I guess that makes us best friends now, huh?");
+            if(!answeredRight || answeredRight){
+                alert("Nice tries. I\'ve travelled to and through: Washington, Oregon, California, Arizona, Nevada, New Mexico, Idaho, Utah, Wyoming, Colorado, Kansas, Missouri, Oklahoma, Iowa, New York and Texas.");
+            }
+                

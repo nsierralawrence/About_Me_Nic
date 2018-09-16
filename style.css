@@ -1,3 +1,51 @@
-*{
-    outline: solid red 1px;
+* {
+    background-color: lavenderblush;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+h1{
+    border-style: solid;
+    border-color: black;
+    background-color: ghostwhite;
+    height: 75px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    padding: 10px;
+    margin: 10px;
+}
+
+h2{
+    border: solid black;
+    background-color: ghostwhite;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    padding: 10px;
+    margin: 10px;
+}
+
+h3{
+    border: dashed black;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    text-decoration: underline;
+    padding: 10px;
+    margin: 10px;
+}
+
+ul.facts{
+    border: dotted black;
+    padding: 5px;
+}
+
+li{
+    padding: 2px;
+    margin: 2px;
+}
+
+p{
+    font-weight: bolder;
 }

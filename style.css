@@ -1,49 +1,84 @@
 * {
-    background-color: lavenderblush;
-    font-family: 'Courier New', Courier, monospace;
+    background-color: cornflowerblue;
     
 }
 
+@font-face {
+    font-family: 'ChunkFive';
+    src: url('fonts/ChunkFive.otf');
+}
+
 h1{
-    border-style: solid;
-    border-color: black;
-    background-color: ghostwhite;
-    height: 75px;
+    border-style: double;
+    border-color: orangered;
+    background-color: aliceblue;
+    height: 45px;
+    width: 700px;
+    font-family: ChunkFive, Modern, serif;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .5em;
-    padding: 10px;
+    padding-bottom: 10px;
+    padding-top: 30px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#holaImage{
+    text-align: center;
+}
+
+img{
+    border-radius: 85px;
+    background-color: aliceblue;
+    border: dotted;
+    border-color: orangered;
+    height: 175px;
     margin: 10px;
 }
 
 h2{
-    border: solid black;
-    background-color: ghostwhite;
+    border: double orangered;
+    width: 700px;
+    background-color: aliceblue;
+    font-family: ChunkFive, Modern, serif;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .5em;
     padding: 10px;
-    margin: 10px;
+    margin: 20px auto 20px auto;
+   
 }
 
 h3{
-    border: dashed black;
+    color: aliceblue;
+    font-family: ChunkFive, Modern, serif;
+    font-size: 25px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.5em;
-    text-decoration: underline;
     padding: 10px;
-    margin: 10px;
+    margin: auto;
+    
 }
 
-ul.facts{
+ul.facts, ol.facts{
     border: dotted black;
-    padding: 5px;
+    color: gold;
+    font-family: sans-serif;
+    padding-left: 25px;
+    margin: auto;
+    width: 700px;
+    line-height: 1.75em;
 }
 
 li{
     padding: 2px;
     margin: 2px;
+}
+
+li.experience{
+    font-weight:bolder;
 }
 
 p{

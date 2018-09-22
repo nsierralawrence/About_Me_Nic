@@ -84,3 +84,16 @@ li.experience{
 p{
     font-weight: bolder;
 }
+
+#kittyimage{
+    text-align: center;
+    margin-left: 500px;
+    border: none;
+    radius: 10px;
+}
+
+figcaption{
+    color: orangered;
+    font-family: sans-serif;
+    text-align: center;
+}
